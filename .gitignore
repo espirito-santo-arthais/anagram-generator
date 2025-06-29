@@ -1,0 +1,39 @@
+# Compiled class files
+target/
+*.class
+
+# Maven local repository files
+log/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+.settings/
+dependency-reduced-pom.xml
+
+# Eclipse / STS IDE files
+*.classpath
+*.project
+*.settings/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+
+# VSCode files
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment files
+.env

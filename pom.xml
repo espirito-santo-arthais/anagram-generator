@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.spread</groupId>
+	<artifactId>anagram-generator</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Anagram Generator</name>
+	<description>Projeto de geração de anagramas em Java com testes unitários</description>
+
+	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>5.10.0</junit.version>
+	</properties>
+
+	<dependencies>
+		<!-- JUnit 5 API + Engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Plugin de compilação Java -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>21</release>
+				</configuration>
+			</plugin>
+
+			<!-- Plugin para rodar testes JUnit 5 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<useModulePath>false</useModulePath>
+				</configuration>
+			</plugin>
+
+			<!-- Plugin para empacotar o JAR com ponto de entrada definido -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>anagramgenerator.Main</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
