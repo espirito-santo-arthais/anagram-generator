@@ -96,6 +96,23 @@ Os testes cobrem os seguintes casos:
 
 ---
 
+## ⚠️ Limitações
+
+Embora o programa seja funcional e confiável, ele utiliza uma abordagem **recursiva** para gerar todos os anagramas possíveis — o que significa que o número de combinações cresce **de forma exponencial** com a quantidade de letras fornecidas.
+
+Por exemplo:
+
+- 3 letras → 6 combinações  
+- 5 letras → 120 combinações  
+- 6 letras → 720 combinações  
+- 10 letras → **mais de 3 milhões** de combinações!
+
+🔁 Portanto, **se você inserir todas as letras do alfabeto de uma vez (como "abcdefghijklmnopqrstuvwxyz")**, o processamento poderá levar muito tempo, consumir muita memória e **parecer que o computador travou**.
+
+💡 Para melhor experiência, recomendamos **testar com no máximo 6 letras** por vez.
+
+---
+
 ## 👨‍💻 Autor
 
 **Raimundo do Espírito Santo**  
